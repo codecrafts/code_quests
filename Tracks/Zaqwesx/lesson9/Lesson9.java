@@ -32,17 +32,13 @@ public class Lesson9 {
         String editedString;
 
 
-        for (String str : sourceText) {
-            editedString = str.trim().replaceAll("\\<.*?>", "");
-            if (editedString.length() != 0)
-                resultText.add(editedString);
-        }
 
-
-
-
-
-
+//        for (String str : sourceText) {
+//            editedString = str.trim().replaceAll("\\<.*?>", "");
+//            if (editedString.length() != 0)
+//                resultText.add(editedString);
+//        }
+        resultText = FileManipulations.removeTagsFromList(sourceText);
         FileManipulations.writeStringsToFile(resultFilePath, resultText);
     }
 }
