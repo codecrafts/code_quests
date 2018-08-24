@@ -20,7 +20,6 @@
 //Google it
 
 import java.nio.charset.Charset;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Lesson9 {
@@ -28,16 +27,8 @@ public class Lesson9 {
         String sourceFilePath = "C:\\Users\\stan\\GitHub\\java.fundamentals\\Tracks\\Zaqwesx\\lesson9\\SourceText.html";
         String resultFilePath = "C:\\Users\\stan\\GitHub\\java.fundamentals\\Tracks\\Zaqwesx\\lesson9\\ResultText";
         List<String> sourceText = FileManipulations.getFileStrings(sourceFilePath, Charset.defaultCharset());
-        List<String> resultText = new ArrayList<>();
-        String editedString;
+        List<String> resultText;
 
-
-
-//        for (String str : sourceText) {
-//            editedString = str.trim().replaceAll("\\<.*?>", "");
-//            if (editedString.length() != 0)
-//                resultText.add(editedString);
-//        }
         resultText = FileManipulations.removeTagsFromList(sourceText);
         FileManipulations.writeStringsToFile(resultFilePath, resultText);
     }

@@ -15,8 +15,6 @@ public class FileManipulations {
         } catch (FileNotHtmlException exc) {
             System.out.println("File is not Html. Exception called.");
         }
-
-
         return text;
     }
 
